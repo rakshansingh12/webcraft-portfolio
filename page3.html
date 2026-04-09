@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About & Contact — WebCraft</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand" href="index.html"><span class="brand-dot"></span>WebCraft</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav gap-1 align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Features</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><h6 class="dropdown-header">📋 Forms & Layouts</h6></li>
+            <li><a class="dropdown-item" href="page2.html#login-section">Login / Registration</a></li>
+            <li><a class="dropdown-item" href="page2.html#product-section">Product Showcase</a></li>
+            <li><a class="dropdown-item" href="page2.html#menu-section">Restaurant Menu</a></li>
+            <li><a class="dropdown-item" href="page2.html#leaderboard-section">Leaderboard</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><h6 class="dropdown-header">⚡ Interactive JS</h6></li>
+            <li><a class="dropdown-item" href="page2.html#dom-section">DOM Manipulation</a></li>
+            <li><a class="dropdown-item" href="page2.html#validation-section">Live Validation</a></li>
+            <li><a class="dropdown-item" href="page2.html#checkout-section">Checkout Form</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">More Pages</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#course-section">Course Outline</a></li>
+            <li><a class="dropdown-item" href="#student-section">Student Records</a></li>
+            <li><a class="dropdown-item" href="#booking-section">Hotel Booking</a></li>
+            <li><a class="dropdown-item" href="#exam-section">Exam Registration</a></li>
+            <li><a class="dropdown-item" href="#contact-section">Contact Us</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link active" href="page3.html">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <span class="section-tag">PAGE 3</span>
+    <h1 class="page-hero-title">About, Academic & Contact</h1>
+    <p class="page-hero-sub">Course outlines, hotel booking, exam registration, contact forms & the developer profile.</p>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════
+     SECTION 1 — COURSE OUTLINE  (Assignments 12, 18, 21)
+════════════════════════════════════════════════════════════════ -->
+<section class="py-6" id="course-section">
+  <div class="container">
+    <div class="section-header mb-5">
+      <span class="section-tag">ASSIGNMENTS 12 · 18 · 21</span>
+      <h2 class="section-title">Academic Content</h2>
+    </div>
+    <div class="row g-5">
+
+      <!-- Assignment 12: Course Outline with Lists -->
+      <div class="col-lg-5">
+        <div class="task-label mb-3">Assignment 12 — Web Technologies Course Outline</div>
+        <div class="content-card">
+          <h4 class="content-card-title">Web Technologies Course Outline</h4>
+
+          <h6 class="outline-section-title">Module Sequence</h6>
+          <ol class="styled-ol">
+            <li>
+              <strong>HTML (HyperText Markup Language)</strong>
+              <ul class="styled-ul">
+                <li>Elements</li>
+                <li>Attributes</li>
+                <li>Lists</li>
+                <li>Tables</li>
+              </ul>
+            </li>
+            <li>CSS (Cascading Style Sheets)</li>
+            <li>Bootstrap (Frontend Framework)</li>
+            <li>JavaScript (Scripting Language)</li>
+            <li>PHP (Server-side Scripting)</li>
+            <li>MySQL (Database Management)</li>
+          </ol>
+
+          <h6 class="outline-section-title mt-4">Key Definitions</h6>
+          <dl class="styled-dl">
+            <dt>Ordered List (&lt;ol&gt;)</dt>
+            <dd>A list of numbered or lettered items showing a specific sequence or hierarchy.</dd>
+            <dt>Unordered List (&lt;ul&gt;)</dt>
+            <dd>A list of items marked with bullets, where order does not matter.</dd>
+            <dt>Description List (&lt;dl&gt;)</dt>
+            <dd>Groups of terms and their corresponding descriptions, typically used for glossaries.</dd>
+          </dl>
+        </div>
+      </div>
+
+      <!-- Assignment 21: B.Tech AI Course Details -->
+      <div class="col-lg-7">
+        <div class="task-label mb-3">Assignment 21 — B.Tech Course Details Page</div>
+        <!-- Mini header/nav replica -->
+        <div class="uni-header">
+          <h5 class="mb-1">University Institute of Technology</h5>
+          <nav class="uni-nav-mini">
+            <a href="#">Home</a>
+            <a href="#">Departments</a>
+            <a href="#">Faculty</a>
+            <a href="#">Contact</a>
+          </nav>
+        </div>
+        <div class="content-card mt-0 rounded-top-0">
+          <h4 class="content-card-title">B.Tech in Artificial Intelligence</h4>
+          <p><strong>Course Code:</strong> AI-2024</p>
+
+          <h6 class="outline-section-title">Description</h6>
+          <p>This program focuses on machine learning, neural networks, and data science to prepare students for the future of technology.</p>
+          <p><strong>Duration:</strong> 4 Years / 8 Semesters &nbsp;|&nbsp; <strong>Eligibility:</strong> 10+2 with PCM (Min 60%)</p>
+
+          <h6 class="outline-section-title">Syllabus (Modules)</h6>
+          <ul class="styled-ul">
+            <li>Module 1: Introduction to Python & Logic</li>
+            <li>Module 2: Data Structures and Algorithms</li>
+            <li>Module 3: Machine Learning Frameworks</li>
+            <li>Module 4: Deep Learning & Computer Vision</li>
+          </ul>
+
+          <h6 class="outline-section-title">Fee Structure</h6>
+          <div class="table-wrapper">
+            <table class="table table-dark table-sm mb-0">
+              <thead><tr><th>Description</th><th>Amount (per Semester)</th></tr></thead>
+              <tbody>
+                <tr><td>Tuition Fee</td><td class="price-cell">$4,500</td></tr>
+                <tr><td>Lab & Tech Fee</td><td class="price-cell">$800</td></tr>
+                <tr><td>Examination Fee</td><td class="price-cell">$200</td></tr>
+                <tr><td><strong>Total</strong></td><td class="price-cell"><strong>$5,500</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Mini footer -->
+        <div class="uni-footer-mini">&copy; 2026 University Institute. All rights reserved.</div>
+      </div>
+
+      <!-- Assignment 18: Centered Container Layout -->
+      <div class="col-12">
+        <div class="task-label mb-3">Assignment 18 — Centered Container Layout</div>
+        <div class="centered-container-demo">
+          <h4 class="text-center mb-3">Welcome to My Project</h4>
+          <p>This is the first paragraph inside our centered container. By setting the maximum width to 1200px and using auto margins, the content remains easy to read on large screens while automatically adjusting to fit smaller devices.</p>
+          <p>The padding inside the container ensures that the text doesn't touch the edges of the box, providing a clean and professional look. This is a common layout technique used in almost every modern website to keep content organized and focused.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     SECTION 2 — HOTEL BOOKING  (Assignment 37)
+════════════════════════════════════════════════════════════════ -->
+<section class="py-6 bg-dark-subtle" id="booking-section">
+  <div class="container">
+    <div class="section-header mb-5">
+      <span class="section-tag">ASSIGNMENT 37</span>
+      <h2 class="section-title">Hotel Room Reservation</h2>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8">
+        <div class="task-label mb-3">Assignment 37 — Hotel Booking Form with Full JS Validation</div>
+        <div class="form-glass-card">
+          <h4 class="form-card-title">Room Reservation</h4>
+          <form id="hotelForm37" novalidate>
+            <div class="mb-3">
+              <label class="form-label">Guest Full Name</label>
+              <input type="text" id="guestName37" class="form-control fc-dark" placeholder="John Doe">
+              <div class="err-msg" id="nameError37">Name is required.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Contact Number</label>
+              <input type="tel" id="contactNumber37" class="form-control fc-dark" placeholder="1234567890">
+              <div class="err-msg" id="phoneError37">Valid contact number is required.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Room Type</label>
+              <div class="d-flex flex-column gap-2">
+                <label class="check-label"><input type="radio" name="roomType37" value="Single"> Single Room</label>
+                <label class="check-label"><input type="radio" name="roomType37" value="Double"> Double Room</label>
+                <label class="check-label"><input type="radio" name="roomType37" value="Suite"> Luxury Suite</label>
+              </div>
+              <div class="err-msg" id="roomError37">Please select a room type.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Additional Services (Select at least one)</label>
+              <div class="d-flex flex-column gap-2">
+                <label class="check-label"><input type="checkbox" name="services37" value="Breakfast"> Breakfast</label>
+                <label class="check-label"><input type="checkbox" name="services37" value="Airport Pickup"> Airport Pickup</label>
+                <label class="check-label"><input type="checkbox" name="services37" value="Wi-Fi"> Premium Wi-Fi</label>
+              </div>
+              <div class="err-msg" id="serviceError37">Select at least one service.</div>
+            </div>
+            <div class="mb-3 border-top pt-3">
+              <label class="check-label">
+                <input type="checkbox" id="terms37"> I agree to the Terms and Conditions
+              </label>
+              <div class="err-msg" id="termsError37">You must agree to submit.</div>
+            </div>
+            <button type="submit" class="btn btn-primary-custom w-100">Book Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     SECTION 3 — EXAM REGISTRATION  (Assignment 36)
+════════════════════════════════════════════════════════════════ -->
+<section class="py-6" id="exam-section">
+  <div class="container">
+    <div class="section-header mb-5">
+      <span class="section-tag">ASSIGNMENT 36</span>
+      <h2 class="section-title">Exam Registration</h2>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-5 col-md-8">
+        <div class="task-label mb-3">Assignment 36 — Exam Registration Form with Checkbox & Radio Validation</div>
+        <div class="form-glass-card">
+          <h4 class="form-card-title">Exam Registration</h4>
+          <form id="examForm36" novalidate>
+            <div class="mb-3">
+              <label class="form-label">Student Name</label>
+              <input type="text" id="studentName36" class="form-control fc-dark">
+              <div class="err-msg" id="nameErr36">Name is required.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email Address</label>
+              <input type="email" id="email36" class="form-control fc-dark">
+              <div class="err-msg" id="emailErr36">Enter a valid email.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Gender</label>
+              <div class="d-flex flex-column gap-2">
+                <label class="check-label"><input type="radio" name="gender36" value="Male"> Male</label>
+                <label class="check-label"><input type="radio" name="gender36" value="Female"> Female</label>
+                <label class="check-label"><input type="radio" name="gender36" value="Other"> Other</label>
+              </div>
+              <div class="err-msg" id="genderErr36">Please select your gender.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Subjects of Interest</label>
+              <div class="d-flex flex-column gap-2">
+                <label class="check-label"><input type="checkbox" name="subject36" value="Math"> Mathematics</label>
+                <label class="check-label"><input type="checkbox" name="subject36" value="Science"> Science</label>
+                <label class="check-label"><input type="checkbox" name="subject36" value="Computer"> Computer Science</label>
+              </div>
+              <div class="err-msg" id="subjectErr36">Select at least one subject.</div>
+            </div>
+            <div class="mb-3 border-top pt-3">
+              <label class="check-label">
+                <input type="checkbox" id="declaration36"> I declare that the information is correct
+              </label>
+              <div class="err-msg" id="declErr36">You must accept the declaration.</div>
+            </div>
+            <button type="submit" class="btn btn-primary-custom w-100">Register Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     SECTION 4 — CONTACT FORMS  (Assignments 10, 23, 27)
+════════════════════════════════════════════════════════════════ -->
+<section class="py-6 bg-dark-subtle" id="contact-section">
+  <div class="container">
+    <div class="section-header mb-5">
+      <span class="section-tag">ASSIGNMENTS 10 · 23 · 27</span>
+      <h2 class="section-title">Contact Us</h2>
+    </div>
+
+    <!-- Assignment 10: Contact Info with Address/Phone/Email -->
+    <div class="row g-4 mb-5">
+      <div class="col-12">
+        <div class="task-label mb-3">Assignment 10 — Contact Us Info Page</div>
+      </div>
+      <div class="col-md-4">
+        <div class="info-box">
+          <div class="info-icon">📍</div>
+          <div>
+            <strong>Address</strong>
+            <p class="mb-0 mt-1">123 University Street, Tech Park, City — 560001</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="info-box">
+          <div class="info-icon">📞</div>
+          <div>
+            <strong>Phone</strong>
+            <p class="mb-0 mt-1">+91 12345 67890</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="info-box">
+          <div class="info-icon">✉️</div>
+          <div>
+            <strong>Email</strong>
+            <p class="mb-0 mt-1">contact@college.edu</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="map-placeholder">
+          <span>📍 Map Location View — Find Us Here</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Forms: Assignments 23 + 27 -->
+    <div class="row g-5">
+
+      <!-- Assignment 23: Simple Contact Form -->
+      <div class="col-lg-5">
+        <div class="task-label mb-3">Assignment 23 — Simple Contact Card</div>
+        <div class="form-glass-card">
+          <h4 class="form-card-title">Contact Us</h4>
+          <form id="contactForm23" novalidate>
+            <div class="mb-3">
+              <label class="form-label">Name:</label>
+              <input type="text" name="name" class="form-control fc-dark" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email:</label>
+              <input type="email" name="email" class="form-control fc-dark" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Subject:</label>
+              <input type="text" name="subject" class="form-control fc-dark" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Message:</label>
+              <textarea name="message" class="form-control fc-dark" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary-custom w-100">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Assignment 27: Modern Contact with File Upload & Subject Select -->
+      <div class="col-lg-7">
+        <div class="task-label mb-3">Assignment 27 — Modern Contact Form (with File Upload)</div>
+        <div class="form-glass-card" style="background: linear-gradient(135deg, rgba(102,126,234,0.12), rgba(118,75,162,0.12));">
+          <h4 class="form-card-title">Contact Us — Advanced</h4>
+          <form id="contactForm27" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Full Name</label>
+                <input type="text" id="fullName27" class="form-control fc-dark" placeholder="Enter your name" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email Address</label>
+                <input type="email" id="email27" class="form-control fc-dark" placeholder="email@example.com" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Phone Number</label>
+                <input type="tel" id="phone27" class="form-control fc-dark" placeholder="Your phone number">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Subject</label>
+                <select id="subject27" class="form-select fc-dark" required>
+                  <option value="">— Choose a Topic —</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="support">Technical Support</option>
+                  <option value="billing">Billing Issue</option>
+                  <option value="feedback">Feedback</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea id="message27" class="form-control fc-dark" rows="4" placeholder="How can we help you?"></textarea>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Upload Attachment (PDF, Image)</label>
+                <input type="file" id="attachment27" class="form-control fc-dark">
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary-custom w-100">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     SECTION 5 — ABOUT THE DEVELOPER
+════════════════════════════════════════════════════════════════ -->
+<section class="py-6" id="about-section">
+  <div class="container">
+    <div class="section-header mb-5">
+      <span class="section-tag">ABOUT</span>
+      <h2 class="section-title">The Developer</h2>
+    </div>
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5">
+        <div class="about-avatar-block">
+          <div class="about-avatar">RS</div>
+          <div class="about-glow"></div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <h3 class="about-name">Rakshan Singh</h3>
+        <p class="about-reg">23BCB0062</p>
+        <p class="about-bio">
+          B.Tech student specializing in Computer Science with a passion for building clean, functional web interfaces.
+          This portfolio integrates all Moodle lab assignments from the Web Programming course — covering HTML structure,
+          CSS layouts, Bootstrap responsiveness, and JavaScript interactivity.
+        </p>
+        <div class="skills-grid">
+          <span class="skill-chip">HTML5</span>
+          <span class="skill-chip">CSS3</span>
+          <span class="skill-chip">Bootstrap 5</span>
+          <span class="skill-chip">JavaScript</span>
+          <span class="skill-chip">DOM Manipulation</span>
+          <span class="skill-chip">Form Validation</span>
+          <span class="skill-chip">Responsive Design</span>
+          <span class="skill-chip">Flexbox / Grid</span>
+        </div>
+
+        <!-- Task summary -->
+        <div class="task-summary mt-4">
+          <h6 class="mb-3">All Integrated Assignments</h6>
+          <div class="task-chips">
+            <span class="task-chip">Lab 38 — Smart Focus Registration</span>
+            <span class="task-chip">Asgn 10 — Contact Info</span>
+            <span class="task-chip">Asgn 12 — Course Outline Lists</span>
+            <span class="task-chip">Asgn 13 — Restaurant Menu Table</span>
+            <span class="task-chip">Asgn 14 — Leaderboard Table</span>
+            <span class="task-chip">Asgn 15 — Student Records</span>
+            <span class="task-chip">Asgn 16 — Product Catalog Table</span>
+            <span class="task-chip">Asgn 18 — Centered Container Layout</span>
+            <span class="task-chip">Asgn 19 — Flexbox Product Grid</span>
+            <span class="task-chip">Asgn 20 — Login + Registration</span>
+            <span class="task-chip">Asgn 21 — Course Details Page</span>
+            <span class="task-chip">Asgn 22 — Product Card + Add to Cart</span>
+            <span class="task-chip">Asgn 23 — Simple Contact Form</span>
+            <span class="task-chip">Asgn 25 — Modern Login Portal</span>
+            <span class="task-chip">Asgn 26 — Create Account Form</span>
+            <span class="task-chip">Asgn 27 — Advanced Contact Form</span>
+            <span class="task-chip">Asgn 28 — DOM Text Update</span>
+            <span class="task-chip">Asgn 29 — Greeting Page</span>
+            <span class="task-chip">Asgn 30 — Order Calculation</span>
+            <span class="task-chip">Asgn 31 — innerHTML Display</span>
+            <span class="task-chip">Asgn 32 — Status Toggle</span>
+            <span class="task-chip">Asgn 33 — Student Registration + Validation</span>
+            <span class="task-chip">Asgn 34 — Checkout Form + Validation</span>
+            <span class="task-chip">Asgn 35 — VTOP Login</span>
+            <span class="task-chip">Asgn 36 — Exam Registration</span>
+            <span class="task-chip">Asgn 37 — Hotel Booking Form</span>
+            <span class="task-chip">Asgn 39 — Focus Login</span>
+            <span class="task-chip">Asgn 41a — Hover Tooltip</span>
+            <span class="task-chip">Asgn 41b — Real-time Validation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6"><span class="brand-dot"></span><strong>WebCraft</strong> — Rakshan Singh &nbsp;|&nbsp; 23BCB0062</div>
+      <div class="col-md-6 text-md-end mt-3 mt-md-0"><small>Web Programming Lab &copy; 2026. All rights reserved.</small></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
