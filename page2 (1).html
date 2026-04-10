@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Features — WebCraft</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand" href="index.html"><span class="brand-dot"></span>WebCraft</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav gap-1 align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Features</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><h6 class="dropdown-header">📋 Forms & Layouts</h6></li>
+            <li><a class="dropdown-item" href="#login-section">Login / Registration</a></li>
+            <li><a class="dropdown-item" href="#product-section">Product Showcase</a></li>
+            <li><a class="dropdown-item" href="#menu-section">Restaurant Menu</a></li>
+            <li><a class="dropdown-item" href="#leaderboard-section">Leaderboard</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><h6 class="dropdown-header">⚡ Interactive JS</h6></li>
+            <li><a class="dropdown-item" href="#dom-section">DOM Manipulation</a></li>
+            <li><a class="dropdown-item" href="#validation-section">Live Validation</a></li>
+            <li><a class="dropdown-item" href="#checkout-section">Checkout Form</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More Pages</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="page3.html#course-section">Course Outline</a></li>
+            <li><a class="dropdown-item" href="page3.html#student-section">Student Records</a></li>
+            <li><a class="dropdown-item" href="page3.html#booking-section">Hotel Booking</a></li>
+            <li><a class="dropdown-item" href="page3.html#exam-section">Exam Registration</a></li>
+            <li><a class="dropdown-item" href="page3.html#contact-section">Contact Us</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="page3.html">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <span class="section-tag">PAGE 2</span>
+    <h1 class="page-hero-title">Features & Interactive Tasks</h1>
+    <p class="page-hero-sub">Login systems, product UIs, data tables, DOM manipulation and real-time form validation.</p>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════
+     SECTION 1 — LOGIN / REGISTRATION  (Assignments 20, 25, 26, 33, 35, 38, 39)
+════════════════════════════════════════════════════════════════ -->
+<section class="py-6" id="login-section">
+  <div class="container">
+    <div class="section-header mb-5">
+      <span class="section-tag">ASSIGNMENTS 20 · 25 · 26 · 33 · 35 · 38 · 39</span>
+      <h2 class="section-title">Login & Registration Forms</h2>
+    </div>
+
+    <div class="row g-5 justify-content-center">
+
+      <!-- ── Assignment 25: Modern Login Portal ── -->
+      <div class="col-lg-4 col-md-6">
+        <div class="task-label">Assignment 25 — Modern Login Portal</div>
+        <div class="form-glass-card">
+          <h4 class="form-card-title">Login</h4>
+          <form id="loginForm25" novalidate>
+            <div class="mb-3">
+              <label class="form-label">Username or Email</label>
+              <input type="text" id="user25" class="form-control fc-dark" placeholder="Enter username" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" id="pass25" class="form-control fc-dark" placeholder="Enter password" required>
+            </div>
+            <div class="text-end mb-3">
+              <a href="#" class="forgot-link">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn btn-primary-custom w-100">Login</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- ── Assignment 35: VTOP Login ── -->
+      <div class="col-lg-4 col-md-6">
+        <div class="task-label">Assignment 35 — VTOP Login System</div>
+        <div class="form-glass-card">
+          <h4 class="form-card-title">VTOP Login</h4>
+          <form id="vtopForm" novalidate>
+            <div class="mb-3">
+              <label class="form-label">Username (Registration No.)</label>
+              <input type="text" id="vtopUser" class="form-control fc-dark" placeholder="23BCE1234" required>
+              <div class="err-msg" id="vtopUserErr">Username is required.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" id="vtopPass" class="form-control fc-dark" placeholder="••••••••" required>
+              <div class="err-msg" id="vtopPassErr">Password is required.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">User Type</label>
+              <select id="vtopType" class="form-select fc-dark">
+                <option value="">— Select —</option>
+                <option value="student">Student</option>
+                <option value="faculty">Faculty</option>
+                <option value="admin">Admin</option>
+              </select>
+              <div class="err-msg" id="vtopTypeErr">Please select user type.</div>
+            </div>
+            <button type="submit" class="btn btn-primary-custom w-100">Login</button>
+          </form>
+          <!-- Dashboard (hidden by default) -->
+          <div id="vtopDashboard" class="vtop-dashboard d-none mt-3">
+            <h5 id="vtopWelcomeMsg" class="text-success"></h5>
+            <p>You have successfully accessed the VTOP Dashboard.</p>
+            <button class="btn btn-sm btn-outline-danger" onclick="vtopLogout()">Logout</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Assignment 39: Focus-managed Login ── -->
+      <div class="col-lg-4 col-md-6">
+        <div class="task-label">Assignment 39 — Login with Focus Management</div>
+        <div class="form-glass-card">
+          <h4 class="form-card-title">Sign In</h4>
+          <p class="text-muted small">Tab or press Enter after username to jump to password.</p>
+          <form id="loginForm39">
+            <div class="mb-3">
+              <input type="text" id="username39" class="form-control fc-dark" placeholder="Username" required>
+            </div>
+            <div class="mb-3">
+              <input type="password" id="password39" class="form-control fc-dark" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-primary-custom w-100">Sign In</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- ── Assignment 26 / Lab38: Create Account ── -->
+      <div class="col-lg-6">
+        <div class="task-label">Assignment 26 + Lab 38 — Create Account / Smart Focus Registration</div>
+        <div class="form-glass-card">
+          <h4 class="form-card-title">Create Account</h4>
+          <form id="regForm26" novalidate>
+            <div class="row g-3">
+              <div class="col-6">
+                <label class="form-label">First Name</label>
+                <input type="text" id="fn26" class="form-control fc-dark" placeholder="John" required>
+              </div>
+              <div class="col-6">
+                <label class="form-label">Last Name</label>
+                <input type="text" id="ln26" class="form-control fc-dark" placeholder="Doe" required>
+              </div>
+              <div class="col-6">
+                <label class="form-label">Email Address</label>
+                <input type="email" id="email26" class="form-control fc-dark" placeholder="john@example.com" required>
+              </div>
+              <div class="col-6">
+                <label class="form-label">Phone Number</label>
+                <input type="tel" id="phone26" class="form-control fc-dark" placeholder="1234567890" required>
+              </div>
+              <div class="col-6">
+                <label class="form-label">Password</label>
+                <input type="password" id="pass26" class="form-control fc-dark" placeholder="••••••••" required>
+              </div>
+              <div class="col-6">
+                <label class="form-label">Confirm Password</label>
+                <input type="password" id="cpass26" class="form-control fc-dark" placeholder="••••••••" required>
+              </div>
+              <div class="col-6">
+                <label class="form-label">Date of Birth</label>
+                <input type="date" id="dob26" class="form-control fc-dark" required>
+              </div>
+              <div class="col-6">
+                <label class="form-label d-block">Gender</label>
+                <div class="d-flex gap-3 mt-1">
+                  <label class="check-label"><input type="radio" name="gender26" value="male"> Male</label>
+                  <label class="check-label"><input type="radio" name="gender26" value="female"> Female</label>
+                  <label class="check-label"><input type="radio" name="gender26" value="other"> Other</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <label class="check-label">
+                  <input type="checkbox" id="terms26" required> I agree to the Terms and Conditions
+                </label>
+              </div>
+              <div class="col-12">
+                <div class="err-msg" id="regErr26"></div>
+                <button type="submit" class="btn btn-primary-custom w-100">Register Now</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- ── Assignment 33: University Student Registration with Validation ── -->
+      <div class="col-lg-6">
+        <div class="task-label">Assignment 33 — University Student Registration (with JS Validation)</div>
+        <div class="form-glass-card">
+          <h4 class="form-card-title">Student Registration</h4>
+          <form id="uniForm33" novalidate>
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" id="stuName33" class="form-control fc-dark" required>
+              <div class="err-msg" id="nameErr33">Full name is required.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email Address</label>
+              <input type="email" id="stuEmail33" class="form-control fc-dark" required>
+              <div class="err-msg" id="emailErr33">Enter a valid email address.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Age</label>
+              <input type="number" id="stuAge33" class="form-control fc-dark" required>
+              <div class="err-msg" id="ageErr33">Must be a number and at least 18.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" id="stuPass33" class="form-control fc-dark" required>
+              <div class="err-msg" id="passErr33">Minimum 8 characters required.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Confirm Password</label>
+              <input type="password" id="stuConfirm33" class="form-control fc-dark" required>
+              <div class="err-msg" id="confirmErr33">Passwords do not match.</div>
+            </div>
+            <button type="submit" class="btn btn-primary-custom w-100">Register Student</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     SECTION 2 — LIVE FORM VALIDATION  (Assignment 41b)
+════════════════════════════════════════════════════════════════ -->
+<section class="py-6 bg-dark-subtle" id="validation-section">
+  <div class="container">
+    <div class="section-header mb-5">
+      <span class="section-tag">ASSIGNMENT 41b</span>
+      <h2 class="section-title">Real-Time Form Validation</h2>
+      <p class="section-sub">Button enables only when email & password both pass validation.</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="form-glass-card">
+          <h4 class="form-card-title">Register</h4>
+          <form id="regForm41" novalidate>
+            <div class="mb-3 position-relative">
+              <label class="form-label">Email</label>
+              <input type="text" id="email41" class="form-control fc-dark" placeholder="Enter email">
+              <span id="emailIcon41" class="valid-icon"></span>
+              <div class="err-msg" id="emailError41">Invalid email format</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" id="password41" class="form-control fc-dark" placeholder="8+ chars, 1 number, 1 symbol">
+              <div class="err-msg" id="passError41">Password is too weak</div>
+              <div class="password-strength-bar mt-2">
+                <div id="strengthBar" class="strength-fill"></div>
+              </div>
+              <small id="strengthText" class="text-muted"></small>
+            </div>
+            <button type="submit" id="submitBtn41" class="btn btn-primary-custom w-100" disabled>Create Account</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     SECTION 3 — PRODUCT SHOWCASE  (Assignments 16, 19, 22, 41a)
+════════════════════════════════════════════════════════════════ -->
+<section class="py-6" id="product-section">
+  <div class="container">
+    <div class="section-header mb-5">
+      <span class="section-tag">ASSIGNMENTS 16 · 19 · 22 · 41a</span>
+      <h2 class="section-title">Product Showcase</h2>
+    </div>
+
+    <!-- Assignment 22: Product Card with hover + Add to Cart -->
+    <div class="task-label mb-3">Assignment 22 + 41a — Product Card with Hover Tooltip & Add to Cart</div>
+    <div class="row g-4 justify-content-center mb-5">
+      <div class="col-md-4 col-lg-3" id="tooltip-product-col">
+        <div class="product-card-custom position-relative">
+          <div class="tooltip-wrapper">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=280&fit=crop&auto=format" alt="Wireless Headphones" class="product-img-custom" id="productImg41">
+            <div id="tooltip41" class="product-tooltip">
+              <span class="tooltip-price">Price: $59.99</span>
+              <hr class="tooltip-hr">
+              <span>High-quality noise-canceling, 20hrs battery, ergonomic design</span>
+            </div>
+          </div>
+          <div class="p-3">
+            <h5 class="product-name-custom">Wireless Headphones</h5>
+            <div class="product-price-custom">$59.99</div>
+            <div class="product-rating">★★★★☆ <small class="text-muted">(128 Reviews)</small></div>
+            <button class="btn btn-accent-sm w-100 mt-2" onclick="addToCart(this, 'Wireless Headphones')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Assignment 19: Flexbox Product Grid -->
+      <div class="col-md-4 col-lg-3">
+        <div class="product-card-custom">
+          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=280&fit=crop&auto=format" alt="Smartphone" class="product-img-custom">
+          <div class="p-3">
+            <h5 class="product-name-custom">Smartphone X1</h5>
+            <div class="product-price-custom">$699</div>
+            <div class="product-rating">★★★★★ <small class="text-muted">(340 Reviews)</small></div>
+            <button class="btn btn-accent-sm w-100 mt-2" onclick="addToCart(this, 'Smartphone X1')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3">
+        <div class="product-card-custom">
+          <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=280&fit=crop&auto=format" alt="Laptop" class="product-img-custom">
+          <div class="p-3">
+            <h5 class="product-name-custom">Pro Laptop 15"</h5>
+            <div class="product-price-custom">$1,200</div>
+            <div class="product-rating">★★★★☆ <small class="text-muted">(215 Reviews)</small></div>
+            <button class="btn btn-accent-sm w-100 mt-2" onclick="addToCart(this, 'Pro Laptop 15')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3">
+        <div class="product-card-custom">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=280&fit=crop&auto=format" alt="Smartwatch" class="product-img-custom">
+          <div class="p-3">
+            <h5 class="product-name-custom">Fitness Smartwatch</h5>
+            <div class="product-price-custom">$199</div>
+            <div class="product-rating">★★★★☆ <small class="text-muted">(90 Reviews)</small></div>
+            <button class="btn btn-accent-sm w-100 mt-2" onclick="addToCart(this, 'Fitness Smartwatch')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Status -->
+    <div id="cartStatus" class="cart-status d-none">
+      🛒 Cart: <span id="cartItems"></span>
+    </div>
+
+    <!-- Assignment 16: Product Catalog Table -->
+    <div class="task-label mt-5 mb-3">Assignment 16 — Product Catalog Table</div>
+    <div class="table-wrapper">
+      <table class="table table-dark table-hover align-middle mb-0">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=80&h=80&fit=crop&auto=format" alt="Phone" class="table-img"></td>
+            <td>Smartphone X1</td>
+            <td class="price-cell">$699</td>
+            <td>High-end smartphone with OLED display and triple camera setup.</td>
+          </tr>
+          <tr>
+            <td><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=80&h=80&fit=crop&auto=format" alt="Laptop" class="table-img"></td>
+            <td>Pro Laptop 15"</td>
+            <td class="price-cell">$1,200</td>
+            <td>Powerful laptop for creators and developers with 16GB RAM.</td>
+          </tr>
+          <tr>
+            <td><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=80&h=80&fit=crop&auto=format" alt="Headphones" class="table-img"></td>
+            <td>Wireless Headphones</td>
+            <td class="price-cell">$150</td>
+            <td>Noise-canceling over-ear headphones with 30-hour battery life.</td>
+          </tr>
+          <tr>
+            <td><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=80&h=80&fit=crop&auto=format" alt="Watch" class="table-img"></td>
+            <td>Fitness Smartwatch</td>
+            <td class="price-cell">$199</td>
+            <td>Tracks heart rate, steps, and sleep with built-in GPS.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     SECTION 4 — RESTAURANT MENU  (Assignment 13)
+════════════════════════════════════════════════════════════════ -->
+<section class="py-6 bg-dark-subtle" id="menu-section">
+  <div class="container">
+    <div class="section-header mb-5">
+      <span class="section-tag">ASSIGNMENT 13</span>
+      <h2 class="section-title">Campus Bites Restaurant</h2>
+    </div>
+    <div class="task-label mb-3">Restaurant Menu Table with Category List</div>
+    <div class="table-wrapper">
+      <table class="table table-dark table-hover align-middle mb-0">
+        <thead>
+          <tr>
+            <th>Dish Name</th>
+            <th>Price</th>
+            <th>Qty Available</th>
+            <th>Offers</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <strong class="d-block">Our Categories:</strong>
+              <ul class="menu-cat-list">
+                <li>Appetizers</li>
+                <li>Main Course</li>
+                <li>Beverages</li>
+              </ul>
+              <hr class="my-1">
+              Paneer Tikka
+            </td>
+            <td class="price-cell">₹180</td>
+            <td>15</td>
+            <td class="offer-cell">Buy 1 Get 1</td>
+          </tr>
+          <tr>
+            <td>Veg Spring Rolls</td>
+            <td class="price-cell">₹120</td>
+            <td>20</td>
+            <td class="offer-cell">10% Off for Students</td>
+          </tr>
+          <tr>
+            <td>Chicken Wings</td>
+            <td class="price-cell">₹220</td>
+            <td>10</td>
+            <td class="offer-cell">Free Soft Drink</td>
+          </tr>
+          <tr>
+            <td>Cheese Garlic Bread</td>
+            <td class="price-cell">₹100</td>
+            <td>25</td>
+            <td class="offer-cell">Flat ₹20 Off</td>
+          </tr>
+          <tr>
+            <td>Butter Chicken</td>
+            <td class="price-cell">₹350</td>
+            <td>12</td>
+            <td class="offer-cell">Combo with Naan</td>
+          </tr>
+          <tr>
+            <td>Veg Biryani</td>
+            <td class="price-cell">₹240</td>
+            <td>18</td>
+            <td class="offer-cell">Extra Raita Free</td>
+          </tr>
+          <tr>
+            <td>White Sauce Pasta</td>
+            <td class="price-cell">₹200</td>
+            <td>8</td>
+            <td class="offer-cell">—</td>
+          </tr>
+          <tr>
+            <td>Club Sandwich</td>
+            <td class="price-cell">₹150</td>
+            <td>30</td>
+            <td class="offer-cell">Student Special Price</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     SECTION 5 — LEADERBOARD + STUDENT RECORDS  (Assignments 14, 15)
+════════════════════════════════════════════════════════════════ -->
+<section class="py-6" id="leaderboard-section">
+  <div class="container">
+    <div class="section-header mb-5">
+      <span class="section-tag">ASSIGNMENTS 14 · 15</span>
+      <h2 class="section-title">Academic Records</h2>
+    </div>
+    <div class="row g-5">
+
+      <!-- Assignment 14: Academic Leaderboard -->
+      <div class="col-lg-6">
+        <div class="task-label mb-3">Assignment 14 — Academic Leaderboard — Term 1</div>
+        <div class="table-wrapper">
+          <table class="table table-dark table-hover align-middle mb-0">
+            <thead>
+              <tr><th>Rank</th><th>Medal</th><th>Student Details</th><th>Score</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="rank-cell">1st</td>
+                <td><span class="medal gold">🥇</span></td>
+                <td>
+                  <strong>Arjun Mehta</strong>
+                  <ul class="subject-list"><li>Mathematics</li><li>Physics</li></ul>
+                </td>
+                <td><span class="score-badge">98%</span></td>
+              </tr>
+              <tr>
+                <td class="rank-cell">2nd</td>
+                <td><span class="medal silver">🥈</span></td>
+                <td>
+                  <strong>Sara Khan</strong>
+                  <ul class="subject-list"><li>Chemistry</li><li>Biology</li></ul>
+                </td>
+                <td><span class="score-badge">95%</span></td>
+              </tr>
+              <tr>
+                <td class="rank-cell">3rd</td>
+                <td><span class="medal bronze">🥉</span></td>
+                <td>
+                  <strong>Leo Das</strong>
+                  <ul class="subject-list"><li>Computer Science</li><li>English</li></ul>
+                </td>
+                <td><span class="score-badge">92%</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Assignment 15: Department Student Records -->
+      <div class="col-lg-6">
+        <div class="task-label mb-3">Assignment 15 — Department Student Records</div>
+        <div class="table-wrapper">
+          <table class="table table-dark table-hover align-middle mb-0">
+            <thead>
+              <tr><th>Photo</th><th>Name</th><th>Roll No</th><th>Department</th><th>Email</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><div class="student-avatar">RS</div></td>
+                <td>Rahul Sharma</td>
+                <td class="mono-text">CS2101</td>
+                <td>Computer Science</td>
+                <td class="mono-text small"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f0829198859cb0939f9c9c959795de959485">[email&#160;protected]</a></td>
+              </tr>
+              <tr>
+                <td><div class="student-avatar">AI</div></td>
+                <td>Ananya Iyer</td>
+                <td class="mono-text">EC2105</td>
+                <td>Electronics</td>
+                <td class="mono-text small"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c9a8a7a8a7b0a889aaa6a5a5acaeace7acadbc">[email&#160;protected]</a></td>
+              </tr>
+              <tr>
+                <td><div class="student-avatar">VS</div></td>
+                <td>Vikram Singh</td>
+                <td class="mono-text">ME2112</td>
+                <td>Mechanical</td>
+                <td class="mono-text small"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="97e1fefce5f6fad7f4f8fbfbf2f0f2b9f2f3e2">[email&#160;protected]</a></td>
+              </tr>
+              <tr>
+                <td><div class="student-avatar">SP</div></td>
+                <td>Sneha Patel</td>
+                <td class="mono-text">IT2108</td>
+                <td>Information Tech</td>
+                <td class="mono-text small"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1e6d707b767f5e7d7172727b797b307b7a6b">[email&#160;protected]</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     SECTION 6 — DOM MANIPULATION  (Assignments 28, 29, 30, 31, 32)
+════════════════════════════════════════════════════════════════ -->
+<section class="py-6 bg-dark-subtle" id="dom-section">
+  <div class="container">
+    <div class="section-header mb-5">
+      <span class="section-tag">ASSIGNMENTS 28 · 29 · 30 · 31 · 32</span>
+      <h2 class="section-title">DOM Manipulation</h2>
+    </div>
+    <div class="row g-4">
+
+      <!-- Assignment 28 -->
+      <div class="col-md-4">
+        <div class="demo-card">
+          <div class="demo-tag">Assignment 28</div>
+          <h5>Update Text on Click</h5>
+          <p id="textPara28b" class="demo-output-text">Original Text</p>
+          <button class="btn btn-accent-sm" onclick="document.getElementById('textPara28b').textContent='Welcome to JavaScript!'">Click Me</button>
+        </div>
+      </div>
+
+      <!-- Assignment 31 -->
+      <div class="col-md-4">
+        <div class="demo-card">
+          <div class="demo-tag">Assignment 31</div>
+          <h5>innerHTML Display</h5>
+          <div id="messageDisplay31b" class="demo-output-text muted-placeholder">Click to show message…</div>
+          <button class="btn btn-accent-sm mt-2" onclick="document.getElementById('messageDisplay31b').innerHTML='<strong style=\'color:var(--accent)\'>Welcome to JavaScript!</strong>'">Show Message</button>
+        </div>
+      </div>
+
+      <!-- Assignment 32 -->
+      <div class="col-md-4">
+        <div class="demo-card">
+          <div class="demo-tag">Assignment 32</div>
+          <h5>Status Toggle</h5>
+          <p id="statusDisplay32b" class="demo-output-text status-offline">● Status: Offline</p>
+          <button class="btn btn-accent-sm" onclick="goOnline('statusDisplay32b')">Go Online</button>
+        </div>
+      </div>
+
+      <!-- Assignment 29 -->
+      <div class="col-md-6">
+        <div class="demo-card">
+          <div class="demo-tag">Assignment 29</div>
+          <h5>Greeting Page</h5>
+          <div class="d-flex gap-2 mt-2">
+            <input type="text" id="userName29b" class="form-control form-control-sm demo-input" placeholder="Type your name…">
+            <button class="btn btn-accent-sm" onclick="greetUser('userName29b','displayMessage29b')">Submit</button>
+          </div>
+          <div id="displayMessage29b" class="demo-output-text mt-2"></div>
+        </div>
+      </div>
+
+      <!-- Assignment 30 -->
+      <div class="col-md-6">
+        <div class="demo-card">
+          <div class="demo-tag">Assignment 30</div>
+          <h5>Order Calculation</h5>
+          <div class="row g-2 mt-1">
+            <div class="col-6">
+              <input type="number" id="priceInput30b" class="form-control form-control-sm demo-input" placeholder="Price (₹)" value="150">
+            </div>
+            <div class="col-6">
+              <input type="number" id="qtyInput30b" class="form-control form-control-sm demo-input" placeholder="Qty" value="5">
+            </div>
+          </div>
+          <button class="btn btn-accent-sm mt-2" onclick="calcOrder('priceInput30b','qtyInput30b','orderResult30b')">Calculate</button>
+          <div id="orderResult30b" class="demo-output-text mt-2"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════
+     SECTION 7 — CHECKOUT FORM  (Assignment 34)
+════════════════════════════════════════════════════════════════ -->
+<section class="py-6" id="checkout-section">
+  <div class="container">
+    <div class="section-header mb-5">
+      <span class="section-tag">ASSIGNMENT 34</span>
+      <h2 class="section-title">Checkout — Online Shop</h2>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-5 col-md-7">
+        <div class="task-label mb-3">Assignment 34 — Checkout Form with Full JS Validation</div>
+        <div class="form-glass-card">
+          <h4 class="form-card-title">Checkout</h4>
+          <form id="checkoutForm34" novalidate>
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" id="fullName34" class="form-control fc-dark">
+              <div class="err-msg" id="nameErr34">Name is required</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Phone Number</label>
+              <input type="text" id="phone34" class="form-control fc-dark" placeholder="10-digit number">
+              <div class="err-msg" id="phoneErr34">Enter exactly 10 digits</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Delivery Address</label>
+              <textarea id="address34" class="form-control fc-dark" rows="3"></textarea>
+              <div class="err-msg" id="addrErr34">Address is required</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">ZIP / Postal Code</label>
+              <input type="text" id="zip34" class="form-control fc-dark" placeholder="6-digit code">
+              <div class="err-msg" id="zipErr34">Invalid ZIP code format</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Payment Method</label>
+              <div class="d-flex flex-column gap-2">
+                <label class="check-label"><input type="radio" name="payment34" value="cod"> Cash on Delivery</label>
+                <label class="check-label"><input type="radio" name="payment34" value="card"> Credit/Debit Card</label>
+                <label class="check-label"><input type="radio" name="payment34" value="upi"> UPI / Net Banking</label>
+              </div>
+              <div class="err-msg" id="payErr34">Please select a payment option</div>
+            </div>
+            <button type="submit" class="btn btn-primary-custom w-100">Place Order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+  
